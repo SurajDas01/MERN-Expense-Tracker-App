@@ -1,0 +1,48 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.tracker-box {
+  position: relative;
+  padding: 20px;
+  border-radius: 12px;
+  background: #111;
+  color: white;
+  width: 700px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+/* Neon RGB Border Animation */
+.tracker-box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, violet, red);
+  background-size: 600% 600%;
+  border-radius: 12px;
+  z-index: -1;
+  animation: borderFlow 8s linear infinite;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.salary-input input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin: 20px 0;
+}
